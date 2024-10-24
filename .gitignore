@@ -3,9 +3,10 @@ ex00/BraiiiiinnnzzzZ
 ex01/*.o
 ex01/BraiiiiinnnzzzZ
 ex02/*.o
-ex02Brain
+ex02/Brain
 ex03/*.o
 ex03/Human
 ex04/*.o
 ex05/*.o
+ex05/harlFilter
 .vscode
