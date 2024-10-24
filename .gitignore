@@ -7,6 +7,7 @@ ex02/Brain
 ex03/*.o
 ex03/Human
 ex04/*.o
+ex04/replace
 ex05/*.o
 ex05/harlFilter
 .vscode
