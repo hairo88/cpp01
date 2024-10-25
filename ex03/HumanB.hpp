@@ -1,5 +1,4 @@
-#ifndef HUMANB_HPP
-#define HUMANB_HPP
+#pragma once
 
 #include "Weapon.hpp"
 
@@ -10,18 +9,9 @@ class HumanB
         Weapon *weapon;
 
     public:
-        HumanB(const std::string &name) : name(name), weapon(0) {}
+        HumanB(const std::string &name);
 
-        void setWeapon(Weapon &weapon) {this->weapon = &weapon;}
+        void setWeapon(Weapon &weapon);
 
-        void attack() const{
-            if (weapon) {
-                std::cout << name << " attack with their " << weapon->getType() << std::endl;
-            }
-            else {
-                std::cout << name << " doesn't have a weapon." << std::endl;
-            }
-        }
+        void attack() const;
 };
-
-#endif

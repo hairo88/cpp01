@@ -1,5 +1,4 @@
-#ifndef HUMANA_HPP
-#define HUMANA_HPP
+#pragma once
 
 #include "Weapon.hpp"
 
@@ -9,11 +8,7 @@ class HumanA
         std::string name;
         Weapon &weapon;
     public:
-        HumanA(const std::string &name, Weapon &weapon) : name(name), weapon(weapon) {}
+        HumanA(const std::string &name, Weapon &weapon);
 
-        void attack() const {std::cout << name << " attacks with their " << weapon.getType()
-        << std::endl; }
-
+        void attack() const ;
 };
-
-#endif

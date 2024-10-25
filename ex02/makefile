@@ -1,4 +1,4 @@
-CC=g++
+CXX=g++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 TARGET = Brain
@@ -10,10 +10,10 @@ OBJ = $(SRC:.cpp=.o)
 all: $(TARGET)
 
 $(TARGET): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CXX) $(CFLAGS) -o $@ $^
 
 %.o: %.cpp
-	$(CC) $(CFLAGS) -c $< -o $@
+	$(CXX) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -rf $(OBJ)
