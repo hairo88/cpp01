@@ -39,12 +39,25 @@ int main(int argc, char* argv[]) {
     inputFile.close();
     tempFile.close();
 
-    if (std::remove(filename.c_str()) != 0) {
-        std::cerr << "Error: Could not remove original file." << std::endl;
-        return 1;
-    }
+    // if (std::remove(filename.c_str()) != 0) {
+    //     std::cerr << "Error: Could not remove original file." << std::endl;
+    //     return 1;
+    // }
 
-    if (std::rename("temp.txt", filename.c_str()) != 0) {
+    #
+    std::string test(filename);
+    std::string re(".replace");
+    std::cout << "filename " << filename << std::endl;
+    size_t pos = test.find(".");
+    if (pos != std::string::npos) {
+        test.erase(pos, test.length() - pos);
+        test.insert(pos, ".replace");
+        pos = line.find(test, pos + test.find(".", pos + re.length()));
+    }
+    std::cout << test << std::endl;
+
+
+    if (std::rename("temp.txt", test.c_str()) != 0) {
         std::cerr << "Error: Could not rename temporary file." << std::endl;
         return 1;
     }
