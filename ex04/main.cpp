@@ -39,12 +39,6 @@ int main(int argc, char* argv[]) {
     inputFile.close();
     tempFile.close();
 
-    // if (std::remove(filename.c_str()) != 0) {
-    //     std::cerr << "Error: Could not remove original file." << std::endl;
-    //     return 1;
-    // }
-
-    #
     std::string test(filename);
     std::string re(".replace");
     std::cout << "filename " << filename << std::endl;
